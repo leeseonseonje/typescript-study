@@ -1,0 +1,16 @@
+타입스크립트는 프로그래밍 언어 이면서 컴파일러,
+타입스크립트파일(.ts)는 tsc(타입스크립트 컴파일러)를 통해 자바스크립트 파일(.js)로 컴파일된다.
+
+npm install -g typescript
+
+.ts 파일 생성
+
+tsc(typescript compiler) [FileName].ts
+
+[FileName].js 파일 생김 
+
+node app.js 로 실행 가능
+
+tsc --init tsconfig.json 파일을 생성해줌
+
+tsc -w(watch) [FileName].ts -> 파일을 세이브 하면 자동으로 컴파일 해줌
