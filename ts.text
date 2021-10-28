@@ -14,3 +14,5 @@ node app.js 로 실행 가능
 tsc --init tsconfig.json 파일을 생성해줌
 
 tsc -w(watch) [FileName].ts -> 파일을 세이브 하면 자동으로 컴파일 해줌
+
+npm init -> pakage.json 생성 의존성 관리
