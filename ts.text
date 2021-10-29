@@ -63,3 +63,28 @@ enum -> enum OS {
 
 리터럴 타입 -> enum을 간단한게 표현(인터페이스에서)
                 ex) os: 'window' | 'macOS' | 'linux'
+
+any 타입 -> 어떤 타입이든 가능한 타입
+
+유니언 타입 -> 제한된 타입들을 동시에 지정할때
+
+타입 별칭 -> 유니언 타입을 재활용하기 위해
+
+타입 가드 -> 
+type StringOrNumber = number | string;
+let itemPrice: number;
+
+const setItemPrice = (price: StringOrNumber): void => {
+    itemPrice = price;
+}
+
+setItemPrice(50); ==> 에러: price는 string일수도 있고, number일수도 있기 때문에 number의 타입을 가지는 itemPrice에 price의 값을 할당 할수 없음.
+
+해결책 -> typeof를 이용한 검증로직 작성
+const setItemPrice = (price: StringOrNumber): void => {
+    if (typeof price === 'string') {
+        itemPrice = 0;
+    } else {
+        itemPrice = price;
+    }
+} -> price의 타입이 string이면 itemPrice에 0을 할당해주고, price의 타입이 number이면 itemPrice에 price의 값을 할당해준다.
