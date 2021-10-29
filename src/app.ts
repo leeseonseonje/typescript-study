@@ -30,3 +30,5 @@ function getStudent(studentId: number): Student {
 function saveStudent (student: Student): void {
     getStudent(1);
 }
+
+
